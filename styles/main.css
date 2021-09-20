@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 4rem;
+}
+
+body#about img {
+    height: 15em;
+}
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    background-color: #969490;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    font-family: 'Shadows Into Light', cursive;
+    color: #71BBD9;
+}
+
+p {
+    max-width: 50em;
+    font-family: 'Montserrat', sans-serif;
+    color: #A67968;
+}
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    color: #A67968;
+}
+
+div {
+    font-family: 'Montserrat', sans-serif;
+    color: #A67968;
+}
+
+a:link {
+    color: #F28705;
+}
+
+
+a:visited {
+    color: #F2A488;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "head head"
+        "nav nav"
+        "main main"
+        "foot foot";
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+@media screen and (min-width: 25em) {
+    body {
+        grid-template-areas: "head head"
+            "nav main"
+            "foot foot";
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: auto 1fr auto;
+    }
+}
+
+
+body>* {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
+}
+
+body>header {
+    grid-area: head;
+}
+
+body>nav {
+    grid-area: nav;
+}
+
+body>nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body>nav ul li {
+    /* display: inline; */
+    padding-right: 1rem;
+    color: #F22F1D;
+}
+
+body>main {
+    grid-area: main;
+    background-color: #f2e9e9;
+    background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+}
+
+body>footer {
+    grid-area: foot;
+}
+
+header,
+footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header h1,
+footer h1 {
+    margin: 0;
+}
+
+body#portfolio ul#portfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+}
+
+@media screen and (min-width: 25em) {
+    body#portfolio ul#portfolioItems li {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
+
+body#portfolio ul#portfolioItems li img {
+    max-width: 100%;
+}
