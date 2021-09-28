@@ -14,7 +14,7 @@ body#about img {
 body {
     font-size: 18px;
     line-height: 1.5;
-    background-color: #969490;
+    background-color: #5a5956;
     background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
 }
 
@@ -47,7 +47,7 @@ a:link {
 }
 
 
-a:visited {
+a:visited, footer {
     color: #F2A488;
 }
 
@@ -133,4 +133,9 @@ body#portfolio ul#portfolioItems {
 
 body#portfolio ul#portfolioItems li img {
     max-width: 100%;
+}
+
+#randomButton {
+    background-color: PINK;
+    border-radius: 100px;
 }
